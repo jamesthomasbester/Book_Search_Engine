@@ -1,20 +1,23 @@
 {
   "name": "book_search_engine",
   "version": "1.0.0",
-  "description": "A full stack repository for books, in which users can search for their favorite books",
-  "main": "index.js",
+  "description": "",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jamesthomasbester/Book_Search_Engine.git"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "heroku-postbuild": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jamesthomasbester/Book_Search_Engine/issues"
+  "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
+    "if-env": "^1.0.4"
   },
-  "homepage": "https://github.com/jamesthomasbester/Book_Search_Engine#readme"
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
 }
