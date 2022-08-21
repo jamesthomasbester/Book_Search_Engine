@@ -1,0 +1,20 @@
+{
+  "name": "book_search_engine",
+  "version": "1.0.0",
+  "description": "A full stack repository for books, in which users can search for their favorite books",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesthomasbester/Book_Search_Engine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesthomasbester/Book_Search_Engine/issues"
+  },
+  "homepage": "https://github.com/jamesthomasbester/Book_Search_Engine#readme"
+}
