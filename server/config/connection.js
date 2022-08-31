@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://jamesbester:typo123@cluster0.jpy13lp.mongodb.net/?retryWrites=true&w=majority", 
-() => console.log("connected to db"),
-e => console.error(e)
-)
+
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/googlebooks',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  },
+);
 
 module.exports = mongoose.connection;
