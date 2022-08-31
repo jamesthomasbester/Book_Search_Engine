@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "watch": "nodemon server.js"
+    "watch": "npm server.js"
   },
   "keywords": [],
   "author": "",
